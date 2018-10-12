@@ -49,11 +49,196 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+@articleFont-size: 1.6rem;
+@article-color:#46A29F;
+@article-decoration: underline #46A29F;
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color: #5D5C61;
 }
 
+
+.container {
+	width:1200px;
+	margin: 20px auto;
+	background-color: #0B0C10;
+}
+	  
+h1 {
+	font-size:2.2rem;
+	align-self: flex-start;
+	justify-content: center;
+}
+
+
+p {
+	color:#FFFFFF;
+}
+
+ul {
+	color:#FFFFFF;
+}
+
+img {
+	display:flex;
+	width: 96%;
+	height:200px;
+	margin: 20px;
+}
+
+.header {
+	display:flex;
+	margin:20px;
+	padding:10px 0px 0px;
+
+	h1 {
+		color: #66FCF1;
+	}
+
+	nav {
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 820px;
+	}
+
+	nav a {
+		color: #46A29F;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		color: #66FCF1;
+		text-decoration: underline;
+	}
+}
+
+.about {
+	display:flex;
+	flex-wrap: wrap;
+	margin:20px;
+	
+
+	h2 {
+		font-size: @articleFont-size;
+		color: @article-color;
+		text-decoration: @article-decoration;
+		margin: 0px 0px 20px 0px;
+	}
+
+}
+
+.middle {
+	display:flex;
+	justify-content: center;
+	margin:20px;
+
+	article {
+		flex-wrap: wrap;
+		width:400px;
+		margin: 0px 20px;
+		border: 3px solid #5D5C61;
+	}
+
+	article h2 {
+		font-size: @articleFont-size;
+		color: @article-color;
+		text-decoration: @article-decoration;
+	}
+
+	ul {
+		margin:20px;
+		justify-content: center;
+		list-style-type: disc;
+	}
+
+	li {
+		padding: 5px 0px;
+	}
+}
+
+.contact {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:280px;
+	background-color: #202833;
+	
+	
+	h2 {
+		margin: 20px;
+		color: @article-color;
+		font-size: @articleFont-size;
+	}
+
+	li {
+		padding: 10px 0px;
+	}
+}
+
+footer {
+	display:flex;
+	justify-content: center;
+	color:@article-color;
+	padding:20px;
+}
+
+@media (max-width:500px){
+
+.container {
+	width:100%;
+	max-width:400px;
+}
+
+.header {
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+
+		
+		h1 {
+		width:100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;	
+		}
+
+		nav {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		a {
+			display:flex;
+			justify-content: center;
+			width:100%;
+			border: solid grey 1px;
+			padding: .909% 0% .909% 0%;
+		}
+}
+
+.about {
+	display: flex;
+	justify-content: center;
+}
+
+.middle {
+	display:flex;
+	flex-wrap: wrap;
+	width:100%;
+
+	article {
+		width:100%;
+		margin: 0px 0px 10px 0px;
+	}
+}
+}
